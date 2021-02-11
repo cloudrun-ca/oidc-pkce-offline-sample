@@ -1,5 +1,5 @@
 {
-  "name": "embed-auth-demo",
+  "name": "oidc-pkce-offline-sample",
   "version": "1.0.0",
   "private": true,
   "dependencies": {

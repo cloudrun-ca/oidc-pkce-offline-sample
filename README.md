@@ -2,4 +2,4 @@
 
 Sample demonstrates OIDC Authorization Code Flow /w PKCE and offline_access. No dependancies on IDaaS specific libraries.
 
-Before running, ensure to set config values in [AppSettings.js](../blob/main/src/AppSettings.js)
+Before running, ensure to set config values in [AppSettings.js](../main/src/AppSettings.js)

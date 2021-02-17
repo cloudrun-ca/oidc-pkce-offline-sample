@@ -26,14 +26,18 @@ function LoginHost(props) {
         const nonce = 'myNonce';
         const state = 'myState';
 
+        // should be a crypto rand value
         // const code_verifier = base64url(crypto.randomBytes(32));
-
+        
+        // using a static value, just for debug purposes
         const rand = "ngchKjMcYM4Az17wBSAknBZ8IzpWYZoU";
+        
         const code_verifier = base64url(rand);
 
         WebStorageHelper.setItem('cloudrun', 'pkce-code-verifier', code_verifier);
 
         const code_verifier_sha256 = sha256(code_verifier);
+        
         const codeChallenge = cryptoBase64Url(code_verifier_sha256);
 
         const url = `${AppSettings.authorizeEndpoint}?client_id=${AppSettings.clientId}&code_challenge=${codeChallenge}&code_challenge_method=S256&nonce=${nonce}&redirect_uri=${AppSettings.callbackURL}&response_type=code&state=${state}&scope=openid email profile offline_access`;

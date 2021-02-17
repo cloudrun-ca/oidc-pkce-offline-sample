@@ -26,7 +26,10 @@ function LoginHost(props) {
         const nonce = 'myNonce';
         const state = 'myState';
 
-        const code_verifier = base64url(crypto.randomBytes(32));
+        // const code_verifier = base64url(crypto.randomBytes(32));
+
+        const rand = "ngchKjMcYM4Az17wBSAknBZ8IzpWYZoU";
+        const code_verifier = base64url(rand);
 
         WebStorageHelper.setItem('cloudrun', 'pkce-code-verifier', code_verifier);
 
